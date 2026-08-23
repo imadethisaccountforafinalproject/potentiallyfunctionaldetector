@@ -1,5 +1,5 @@
 streamlit
-pillow 
+Pillow 
 requests
 torch
 transformers==4.41.2
