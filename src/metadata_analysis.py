@@ -181,7 +181,7 @@ def combine_scores(
 
     return model_score * 1.2
 
-    )
+    
 
 
 def final_label(ai_score):
