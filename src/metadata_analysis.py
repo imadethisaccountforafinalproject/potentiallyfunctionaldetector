@@ -176,22 +176,11 @@ def combine_scores(
     metadata_score,
     evidence_strength,
 ):
-    if metadata_score == 1:
-        return 1
-    if metadata_score is None:
-        return model_score * 1.2
-    if metadata_score == 0:
-        return model_score * 1.2
+    if metadata_score > 0.5:
+        return metadata_score
 
-    if evidence_strength == "strong":
-        return (
-            model_score * 0.25
-            + metadata_score * 0.75
-        )
+    return model_score * 1.2
 
-    return (
-        model_score * 0.5
-        + metadata_score * 0.5
     )
 
 
